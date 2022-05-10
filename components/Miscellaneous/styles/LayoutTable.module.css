@@ -1,0 +1,24 @@
+.layoutTable {
+    display: flex;
+    gap: 10em;
+    color: white;
+
+    .leftContent {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .rightContent {
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 0.005em;
+        line-height: 23px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .layoutTable {
+        flex-direction: column;
+        gap: 1em;
+    }
+}

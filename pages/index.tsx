@@ -1,8 +1,8 @@
+import About from 'components/About/About'
 import type { NextPage } from 'next'
-import HeroContainer from './components/Containers/HeroContainer'
-import LayoutVerticalDivider from './components/Miscellaneous/LayoutDivider'
-import New from './components/New/New'
-import Older from './components/Older/Older'
+import HeroContainer from 'components/Containers/HeroContainer'
+import New from 'components/New/New'
+import Older from 'components/Older/Older'
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +10,7 @@ const Home: NextPage = () => {
       <Older />
       <New />
       <HeroContainer />
+      <About />
     </div>
   )
 }
