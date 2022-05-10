@@ -1,11 +1,11 @@
 .container {
     padding: 2em 5em;
+}
 
-    .title {
-        color: white;
-        font-size: 14px;
-        font-weight: 500
-    }
+.title {
+    color: white;
+    font-size: 14px;
+    font-weight: 500
 }
 
 .posts {
@@ -16,11 +16,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .container {
-        padding-right: 0.7em;
-        padding-left: 0.7em;
-    }
-
     .posts {
         gap: 2em;
     }
