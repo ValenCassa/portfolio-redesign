@@ -43,7 +43,7 @@ const HeroContainer = () => {
                 <RightSection />
                 <VerticalDivider marginRight='19.75em'/>
                 <VerticalDivider marginRight='5.25em'/>
-                <VerticalDivider marginRight='1.5em' />
+                <VerticalDivider marginRight='1.6em' />
                 <VerticalDivider marginRight='23.55em'/>
                 <HorizontalDivider marginTop='3.2em'/>
                 <HorizontalDivider marginTop='5.2em'/>
