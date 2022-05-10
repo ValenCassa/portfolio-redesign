@@ -11,17 +11,6 @@ const RightContent = ({ project }: { project: Project }) => (
             <a className={styles.title}>{project.title}<ArrowIcon /></a>
         </Link>
         <p className={styles.description}>{markdownToTxt(project.content.substring(0, 140))}...</p>
-        <div 
-            style={{ 
-                backgroundImage: `url(${project.imagePath})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                width: '100%',
-                height: '150px',
-                filter: 'drop-shadow(0px 4px 58px rgba(0, 0, 0, 0.0))',
-                borderRadius: '3px'
-                }}/>
     </div>
 )
 
