@@ -1,0 +1,44 @@
+.container {
+    position: relative;
+    padding: 2em 5em;
+    z-index: 2;
+}
+
+.dot {
+    position: relative;
+    z-index: 2;
+    width: 10px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: white;
+    margin-top: 0.2em
+}
+
+.dotBg {
+    position: absolute;
+    width: 7px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    margin-top: -0.53em;
+    margin-left: 0.14em;
+    background: white;
+    z-index: 0;
+    box-shadow: 0px 0px 3px #FFFFFF, 0px 0px 23.76px #FFFFFF, 0px 0px 13.86px #FFFFFF, 0px 0px 6px #FFFFFF, 0px 0px 1.98px #FFFFFF, 0px 0px 0.99px #FFFFFF;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+
+    svg {
+        margin-top: 0.2em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        padding-right: 0.7em;
+        padding-left: 0.7em;
+    }
+}
