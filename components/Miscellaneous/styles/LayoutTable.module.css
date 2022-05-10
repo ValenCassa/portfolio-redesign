@@ -1,11 +1,15 @@
 .layoutTable {
     display: flex;
-    gap: 10em;
+    gap: 5em;
     color: white;
 
     .leftContent {
         font-weight: 500;
         font-size: 14px;
+        p {
+            min-width: 135px;
+            white-space: nowrap;
+        }
     }
 
     .rightContent {
@@ -21,7 +25,7 @@
         flex-direction: column;
         gap: 1em;
         
-        .rightContent {
+        .rightContent#center {
             display: flex;
             justify-content: center;
         }
