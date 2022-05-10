@@ -20,5 +20,10 @@
     .layoutTable {
         flex-direction: column;
         gap: 1em;
+        
+        .rightContent {
+            display: flex;
+            justify-content: center;
+        }
     }
 }

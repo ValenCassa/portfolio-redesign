@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import HeroContainer from 'components/Containers/HeroContainer'
 import New from 'components/New/New'
 import Older from 'components/Older/Older'
+import Skills from 'components/Skills/Skills'
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
       <New />
       <HeroContainer />
       <About />
+      <Skills />
     </div>
   )
 }

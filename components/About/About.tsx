@@ -30,16 +30,16 @@ const About = () => {
             <LayoutTable
                 leftContent="About"
                 rightContent={
-                    <>
-                        <div>
-                            <p>Valen is a full stack developer based in Argentina with a passion for designing and coding stuff. He also likes solving real life problems through code. When not online, he loves hanging out with his friends. Currently, he is studying Computer Science at UNNOBA!</p>
-                            <div style={{ marginTop: '2em', display: "flex", flexDirection: 'column', gap: '1em' }}>
-                                <List item="gufbgif" year="2001"/>
-                                <List item="Studying Computer Science" year="2021"/>
-                                <List item="Working at Selehann" year="2022"/>
-                            </div>
-                        </div>
-                    </>
+                    
+                <div>
+                    <p>Valen is a full stack developer based in Argentina with a passion for designing and coding stuff. He also likes solving real life problems through code. When not online, he loves hanging out with his friends. Currently, he is studying Computer Science at UNNOBA!</p>
+                    <div style={{ marginTop: '2em', display: "flex", flexDirection: 'column', gap: '1em' }}>
+                        <List item="Born in Junin, Argentina" year="2001"/>
+                        <List item="Studying Computer Science" year="2021"/>
+                        <List item="Working at Selehann" year="2022"/>
+                    </div>
+                </div>
+                    
                 }
             />
         </div>
