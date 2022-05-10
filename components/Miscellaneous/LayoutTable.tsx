@@ -1,5 +1,4 @@
 import { ReactNode } from "react"
-import { HorizontalDivider } from "./Divider";
 import styles from './styles/LayoutTable.module.css'
 
 interface LayoutTableProps {
@@ -18,7 +17,6 @@ const LayoutTable = ({ leftContent, rightContent }: LayoutTableProps) => {
                 {rightContent}
             </div>
         </div>
-        <HorizontalDivider backgroundColor="var(--box-color)" marginTop="2em"/>
         </>
     )
 }
