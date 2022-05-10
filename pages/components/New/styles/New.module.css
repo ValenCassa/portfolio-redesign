@@ -1,0 +1,63 @@
+.new {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    .container {
+        background-color: white;
+        padding: 0.65em;
+        border-radius: 3px;
+        margin: 0 4px;
+    }
+
+    .text {
+        display: grid;
+        place-content: center;
+    }
+
+    p {
+        font-size: 13.5px;
+        font-weight: 500;
+        transition: font-weight 0.2s ease-in-out;
+        cursor: pointer;
+
+        svg {
+            margin-left: 0.2em;
+            transform: translateY(-0.2em);
+        }
+
+        &:hover {
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+.light {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7em;
+    width: 100%;
+
+    svg {
+        z-index: -1;
+        max-width: 100%;
+        position: absolute;
+        box-shadow: 0px 0px 116.122px #C4C4C4, 0px 0px 66.3552px #C4C4C4, 0px 0px 38.7072px #C4C4C4, 0px 0px 19.3536px #C4C4C4, 0px 0px 5.5296px #C4C4C4, 0px 0px 2.7648px #C4C4C4;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        margin: 0 !important;
+    }
+
+    .light {
+        svg {
+            max-width: 95%
+        }
+    }
+}

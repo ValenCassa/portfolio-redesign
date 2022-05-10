@@ -1,0 +1,13 @@
+.divider {
+    top: 0;
+    position: absolute;
+    background-color: var(--box-color);
+    width: 1px;
+    height: 100%;  
+    
+    @media only screen and (max-width: 800px) {
+        display: none;
+    }
+}
+
+

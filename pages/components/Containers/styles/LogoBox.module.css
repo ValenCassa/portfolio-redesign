@@ -1,0 +1,45 @@
+.logoBox {
+    position: absolute;
+    padding: 0.8em;
+    background-color: #343434;
+    box-shadow: 0px 4px 59px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    display: grid;
+    place-content: center;
+    z-index: 99999;
+}
+
+.logoBox#github {
+    right: 17.6em;
+    animation: floatIcon 4s ease-in-out infinite;
+}
+
+.logoBox#linkedin {
+    right: -0.58em;
+    margin-top: 2em;
+    animation: floatIconLinkedin 8s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-25px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  @keyframes floatIconLinkedin {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-50px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }

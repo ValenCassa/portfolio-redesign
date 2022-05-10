@@ -1,0 +1,121 @@
+.container {
+    position: absolute;
+    background: #333333;
+    box-shadow: -3px -2px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    width: 225px;
+    height: 117px;
+    padding: 0.8em 0.8em;
+    animation: float 6s ease-in-out infinite;
+    right: 3em;
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+
+        .profile {
+            display: flex;
+            color: white;
+            gap: 8px;
+
+            .avatarContainer {
+                width: 32px;
+                height: 32px;
+                border-radius: 100%;
+                background-color: white;
+                display: grid;
+                place-content: center;
+            }
+
+            .profilePic {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-image: url('/img/perfil.png');
+                background-size: cover;
+                background-position: center;
+                z-index: 2;
+                
+            }
+            
+            .userContainer {
+                display: grid;
+                place-content: center;
+            }
+
+            .name {
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .handle {
+                font-size: 10px;
+                color: #727272;
+            }
+        }
+
+        .followButton {
+            cursor: pointer;
+            align-self: center;
+            background-color: #181818;
+            color: white;
+            font-size: 10px;
+            font-weight: 600;
+            display: grid;
+            place-content: center;
+            padding: 0.2em 1.5em;
+            border-radius: 3px;
+            height: 23px !important;
+            transition-property: background-color color;
+            transition-duration: 0.2s;
+
+            &:hover {
+                background-color: white;
+                color: #181818;
+            }
+        }
+    }
+
+    .middle {
+        color: #e7e7e7;
+        font-weight: 300;
+        margin-top: 0.5em;
+        font-size: 12px;
+    }
+}
+
+.userData {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4em;
+
+    .data {
+        display: flex;
+        align-items: center;
+        gap: 0.4em;
+
+        p {
+            font-size: 12px;
+            color: #C6C6C6;
+
+            span {
+                color: #939393;
+                margin-left: 0.1em;
+            }
+        }
+        
+    }
+}
+
+@keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-25px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
