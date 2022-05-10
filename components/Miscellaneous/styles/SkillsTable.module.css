@@ -49,9 +49,4 @@
             padding: 0.2em 1em
         }
     }
-
-    .tableContainer {
-        display: flex;
-        justify-content: center;
-    }
 }

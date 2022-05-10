@@ -7,7 +7,7 @@ import LinkedinIcon from 'public/svg/Linkedin.svg'
 const LogoBox = ({ children, href, type }: { children: ReactNode, href: string, type: 'github' | 'linkedin' }) => {
     return (
         <Link href={href}>
-            <a>
+            <a target={'_blank'}>
                 <div className={styles.logoBox} id={type === 'github' ? styles.github : styles.linkedin}>
                     {children}
                 </div>

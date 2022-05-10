@@ -3,6 +3,7 @@ import LayoutVerticalDivider from "../Miscellaneous/LayoutDivider"
 
 const Main = ({ children }: { children: ReactNode }) => {
     return (
+        <>
         <div
             style={{
                 display: 'flex',
@@ -13,18 +14,18 @@ const Main = ({ children }: { children: ReactNode }) => {
                 style={{
                     maxWidth: '800px',
                     width: '100%',
-                    marginTop: '4em'
+                    
+                    border: '1px solid var(--box-color)',
                 }}
                 className="container"
             >
-                <div className='layoutDivider' style={{ height: '100%', position: 'absolute', top: 0, maxWidth: '800px', width: '100%' }}>
-                    <LayoutVerticalDivider />
-                    <LayoutVerticalDivider float="right"/>
-                </div>
+                <div style={{ marginTop: '4em' }}>
                 {children}
+                </div>
                 
             </div>
         </div>
+        </>
     )
 }
 
