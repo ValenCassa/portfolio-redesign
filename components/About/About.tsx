@@ -1,6 +1,7 @@
 import LayoutTable from "components/Miscellaneous/LayoutTable"
 import styles from "./styles/About.module.css"
 import ArrowAbout from "public/svg/ArrowAbout.svg"
+import { HorizontalDivider } from "components/Miscellaneous/Divider"
 
 const Dot = () => {
     return (
@@ -24,6 +25,7 @@ const List = ({item, year}: { item: string, year: string }) => {
 
 const About = () => {
     return (
+        <>
         <div className={styles.container}>
             <LayoutTable
                 leftContent="About"
@@ -41,6 +43,8 @@ const About = () => {
                 }
             />
         </div>
+        <HorizontalDivider backgroundColor="var(--box-color)"/>
+        </>
     )
 }
 
