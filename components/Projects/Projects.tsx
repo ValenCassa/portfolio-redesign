@@ -1,5 +1,5 @@
+import SectionContainer from "components/Containers/SectionContainer"
 import { HorizontalDivider } from "components/Miscellaneous/Divider"
-import LayoutTable from "components/Miscellaneous/LayoutTable"
 import Spinner from "components/Miscellaneous/Spinner"
 import useProjects from "hooks/useProjects"
 import ProjectCard from "./ProjectCard"
@@ -17,7 +17,7 @@ const Projects = () => {
 
     return (
         <>
-        <div className={styles.container}>
+        <SectionContainer delay={0.2}>
             <p className={styles.title}>
                 Recent projects
             </p>
@@ -27,7 +27,7 @@ const Projects = () => {
                 ))}
             </div>
 
-        </div>
+        </SectionContainer>
         <HorizontalDivider backgroundColor="var(--box-color)"/>
         </>
     )

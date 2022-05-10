@@ -1,3 +1,4 @@
+import SectionContainer from 'components/Containers/SectionContainer'
 import { HorizontalDivider } from 'components/Miscellaneous/Divider'
 import Spinner from 'components/Miscellaneous/Spinner'
 import usePosts from 'hooks/usePosts'
@@ -13,7 +14,7 @@ const Posts = () => {
 
     return (
         <>
-        <div className={styles.container}>
+        <SectionContainer delay={0.3}>
             <p className={styles.title}>
                 Recent posts
             </p>
@@ -23,7 +24,7 @@ const Posts = () => {
                 ))}
 
             </div>
-        </div>
+        </SectionContainer>
         <HorizontalDivider backgroundColor="var(--box-color)"/>
         </>
     )

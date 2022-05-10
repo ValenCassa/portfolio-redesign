@@ -1,12 +1,12 @@
+import SectionContainer from "components/Containers/SectionContainer"
 import { HorizontalDivider } from "components/Miscellaneous/Divider"
 import LayoutTable from "components/Miscellaneous/LayoutTable"
 import SkillsTable from "components/Miscellaneous/SkillsTable"
-import styles from "./styles/Skills.module.css"
 
 const Skills = () => {
     return (
         <>
-        <div className={styles.container}>
+        <SectionContainer delay={0.1}>
             <LayoutTable 
                 leftContent="Skills"
                 rightContent={
@@ -18,7 +18,7 @@ const Skills = () => {
                 }
                 center
             />
-        </div>
+        </SectionContainer>
         <HorizontalDivider backgroundColor="var(--box-color)"/>
         </>
     )
