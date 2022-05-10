@@ -31,6 +31,10 @@
     align-items: center;
     gap: 0.7em;
 
+    span {
+        width: 40px;
+    }
+
     svg {
         margin-top: 0.2em;
     }

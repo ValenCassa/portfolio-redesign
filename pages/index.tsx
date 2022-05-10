@@ -4,6 +4,7 @@ import HeroContainer from 'components/Containers/HeroContainer'
 import New from 'components/New/New'
 import Older from 'components/Older/Older'
 import Skills from 'components/Skills/Skills'
+import Projects from 'components/Projects/Projects'
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       <HeroContainer />
       <About />
       <Skills />
+      <Projects />
     </div>
   )
 }

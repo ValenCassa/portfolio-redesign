@@ -16,6 +16,7 @@ const Skills = () => {
                     </div>
                     </>
                 }
+                center
             />
         </div>
         <HorizontalDivider backgroundColor="var(--box-color)"/>
