@@ -6,6 +6,7 @@ import Older from 'components/Older/Older'
 import Skills from 'components/Skills/Skills'
 import Projects from 'components/Projects/Projects'
 import Posts from 'components/Posts/Posts'
+import Contact from 'components/Contact/Contact'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Skills />
       <Projects />
       <Posts />
+      <Contact />
     </div>
   )
 }
