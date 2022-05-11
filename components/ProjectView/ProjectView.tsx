@@ -35,7 +35,7 @@ const ProjectView = ({ project }: { project: Project }) => {
                     borderRadius: '3px' 
                 }}
                 />
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1em' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.7em' }}>
                 <div>
                     <Tab name='Stack'/>
                     <p className={styles.stack}>{project.stack.join(', ')}</p>

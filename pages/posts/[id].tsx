@@ -9,6 +9,7 @@ interface Props {
 }
 
 const PostView: NextPage<Props> = ({ post }) => {
+    console.log(post)
     return (
         <Animate>
             <PostComponent post={post}/>
