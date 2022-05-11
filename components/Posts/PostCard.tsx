@@ -7,7 +7,7 @@ import markdownToTxt from "markdown-to-txt"
 
 const RightContent = ({ post }: { post: Post }) => (
     <div className={styles.rightContainer}>
-        <Link href={`/post/${post.id}`}>
+        <Link href={`/posts/${post.id}`}>
             <a className={styles.title}>{post.title}<ArrowIcon /></a>
         </Link>
         <p className={styles.description}>{markdownToTxt(post.content.substring(0, 140))}...</p>
