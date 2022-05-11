@@ -8,18 +8,19 @@ const Main = ({ children }: { children: ReactNode }) => {
             style={{
                 display: 'flex',
                 justifyContent: 'center',
+                height: '100%',
             }}
         >
             <div
                 style={{
                     maxWidth: '800px',
                     width: '100%',
-                    
+                    height: '100%',
                     border: '1px solid var(--box-color)',
                 }}
                 className="container"
             >
-                <div style={{ marginTop: '4em' }}>
+                <div style={{ marginTop: '4em', minHeight: '100vh' }}>
                 {children}
                 </div>
                 
