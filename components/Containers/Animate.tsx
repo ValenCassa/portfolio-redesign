@@ -14,7 +14,7 @@ const variants = {
         initial='hidden'
         animate='visible'
         exit='hidden'
-        transition={ { duration: 0.2, ease: 'easeInOut' } }
+        transition={ { duration: 0.4, ease: 'easeInOut' } }
         key='projects'
       >
         {children}
