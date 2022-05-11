@@ -1,14 +1,15 @@
 export interface Project {
     id: string;
     title: string;
-    website: string;
+    website?: string;
     platform: string[];
     stack: string[];
     date: string;
     imagePath: string;
     content: string;
-    featured: boolean;
+    featured?: boolean;
     featuredTech: string;
     filename: string;
-    inProgress: boolean;
+    inProgress?: boolean;
+    repository?: string;
 }
