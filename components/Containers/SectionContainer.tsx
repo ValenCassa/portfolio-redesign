@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import styles from './styles/SectionContainer.module.css'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 const variants = {
     hidden: { opacity: 0, y: 0 },
@@ -8,15 +9,16 @@ const variants = {
 }
 
 const SectionContainer = ({ children, delay = 0 }: { children: ReactNode, delay?: number }) => {
+    
     return (
         <motion.div 
             className={styles.container}
             variants={variants}
-            key='section'
             initial='hidden'
             animate='visible'
             exit='hidden'
             transition={ { duration: 0.5, ease: 'easeInOut', delay: delay } }
+            key='section'
             >
             {children}
         </motion.div>

@@ -15,21 +15,7 @@
 
 
 
-    th:first-child {
-        border-left: none;
-    }
 
-    th:last-child {
-        border-right: none;
-    }
-
-    td:first-child {
-        border-left: none;
-    }
-
-    td:last-child {
-        border-right: none;
-    }
 
     td, th {
         padding: 0 2.4em;
@@ -46,7 +32,7 @@
     .skillsTable {
         td, th {
             font-size: 13px;
-            padding: 0.2em 1em
+            
         }
     }
 }
