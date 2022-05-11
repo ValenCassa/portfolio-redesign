@@ -3,17 +3,21 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { getAllPosts, getOnePost } from "services";
 import { Post } from "types/Post";
 import { default as PostComponent } from 'components/PostView/PostView'
+import Meta from "components/Miscellaneous/Meta";
+import markdownToTxt from "markdown-to-txt";
 
 interface Props {
     post: Post;
 }
 
 const PostView: NextPage<Props> = ({ post }) => {
-    console.log(post)
     return (
+        <>
+        <Meta title={`${post.title} | Valentin Cassarino`} description={markdownToTxt(post.content)} image={post.imagePath} />        
         <Animate>
             <PostComponent post={post}/>
         </Animate>
+        </>
     )
 }
 

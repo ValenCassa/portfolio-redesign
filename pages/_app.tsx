@@ -9,6 +9,7 @@ import Nav from 'components/Nav/Nav'
 import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
 import MenuContextProvider from 'contexts/MenuContext'
+import Head from 'next/head'
 
 
 
@@ -16,6 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   return (
     <>
+    <Head>
+      <link rel='icon' href='/img/logo-tab.png'/>
+    </Head>
     <MenuContextProvider>
       <Nav />
       <Main>

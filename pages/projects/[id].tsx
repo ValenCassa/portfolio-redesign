@@ -3,6 +3,8 @@ import { Project } from "types/Project"
 import { default as ProjectComponent } from 'components/ProjectView/ProjectView'
 import { getAllProjects, getOneProject } from "services";
 import Animate from "components/Containers/Animate";
+import Meta from "components/Miscellaneous/Meta";
+import markdownToTxt from "markdown-to-txt";
 
 interface Props {
     project: Project;
@@ -11,9 +13,12 @@ interface Props {
 const ProjectView: NextPage<Props> = ({ project }) => {
    
     return (
+        <>
+        <Meta title={`${project.title} | Valentin Cassarino`} description={markdownToTxt(project.content)} image={project.imagePath} />
         <Animate>
             <ProjectComponent project={project}/>
         </Animate>
+        </>
     )
 }
 
