@@ -10,11 +10,27 @@ import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
 import MenuContextProvider from 'contexts/MenuContext'
 import Head from 'next/head'
+import Router from 'next/router'
 
 
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
+
+  const routeChange = () => {
+
+    const tempFix = () => {
+      const allStyleElems = document.querySelectorAll('style[media="x"]');
+      allStyleElems.forEach((elem) => {
+        elem.removeAttribute("media");
+      });
+    };
+    tempFix();
+  };
+
+  Router.events.on("routeChangeComplete", routeChange );
+  Router.events.on("routeChangeStart", routeChange );
+  
   return (
     <>
     <Head>
