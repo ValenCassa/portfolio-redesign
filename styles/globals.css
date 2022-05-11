@@ -83,6 +83,93 @@ a {
   text-decoration: underline;
 }
 
+.markdown {
+  color: #e7e7e7;
+  @media (max-width: 500px) {
+    text-align: justify;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.5em 0 !important;
+  }
+
+  h2 {
+    line-height: 1.5em;
+    border-bottom: 2px rgb(103, 60, 182) solid;
+  }
+
+  h3 {
+    display: inline-block;
+    margin: 0;
+    border-bottom: 2px rgb(94, 148, 185) solid;
+  }
+  p {
+    font-family: "Creato Display";
+    font-size: 17px;
+    letter-spacing: 0.025em;
+    line-height: 1.5em;
+    white-space: normal;
+    font-weight: normal;
+  }
+  mark {
+    font-size: 14px;
+    text-align: center;
+    padding: 0.1em 0.3em;
+    background-color: #ECCABE;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+
+  pre div {
+    background-color: var(--box-color) !important;
+    font-size: 14px !important;
+    border-radius: 3px !important;
+  }
+
+  pre div::-webkit-scrollbar {
+    background-color: transparent;
+    height: 3px;
+    padding: 0 0.5em;
+  }
+
+  pre div::-webkit-scrollbar-thumb {
+    background-color: grey;
+  }
+  
+  code {
+    color: unset;
+  }
+  
+  blockquote {
+    text-align: left;
+    display: inline-block;
+    border-radius: 4px;
+    border-left: 6px solid #e33939;
+    padding: 0.8em 2em 0.8em 0.8em;
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: "Creato Display";
+    font-weight: bold;
+  
+    p {
+      margin: 0;
+    }
+  }
+
+  img {
+    margin: 1em 0;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
 
 @media only screen and (max-width: 800px) {
   .container {

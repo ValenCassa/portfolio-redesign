@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import { solarizedlight } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import rehypeRaw from "rehype-raw";
 
 
@@ -12,7 +12,7 @@ const CodeBlock = {
           <SyntaxHighlighter
             // eslint-disable-next-line react/no-children-prop
             children={String(children).replace(/\n$/, '')}
-            style={solarizedlight}
+            style={atomDark}
             language={match[1]}
             PreTag="div"
             {...props}
@@ -29,14 +29,16 @@ const CodeBlock = {
 const Markdown = ({ value }: { value: string }) => {
 
     return (
-        <ReactMarkdown 
-            // eslint-disable-next-line react/no-children-prop
-            children={value}
-            components={CodeBlock}
-            skipHtml={false}
-            rehypePlugins={[rehypeRaw]}
-            
-        />
+        <div className="markdown">
+            <ReactMarkdown 
+                // eslint-disable-next-line react/no-children-prop
+                children={value}
+                components={CodeBlock}
+                skipHtml={false}
+                rehypePlugins={[rehypeRaw]}
+                
+            />
+        </div>
     )
 }
 
