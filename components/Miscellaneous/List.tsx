@@ -53,12 +53,12 @@ const RightContent = ({ data, pathPrefix }: { data: Project[] | Post[], pathPref
     )
 }
 
-const List = ({ data, pathPrefix }: { data: Project[] | Post[], pathPrefix: string }) => {
+const List = ({ data, pathPrefix, name }: { data: Project[] | Post[], pathPrefix: string, name: string }) => {
     return (
         <div className={styles.container}>
             <ListContextProvider>
                 <LayoutTable 
-                    leftContent={'Projects'}
+                    leftContent={name}
                     rightContent={
                         <div style={{ width: '100%' }}>
                             <RightContent data={data} pathPrefix={pathPrefix} />
