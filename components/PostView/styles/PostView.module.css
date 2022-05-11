@@ -1,0 +1,41 @@
+.container {
+    padding: 2em 5em;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    .postTitle {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .date {
+        font-size: 15px;
+        font-weight: 300;
+        color: #BBBBBB;
+    }
+}
+
+.posts {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        padding: 0.7em
+    }
+
+    .top {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}

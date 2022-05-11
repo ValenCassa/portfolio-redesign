@@ -13,7 +13,7 @@ const Projects: NextPage = () => {
 
     return (
         <Animate>
-            <List data={sortedProjects} pathPrefix={'/projects'} />
+            <List name="Projects" data={sortedProjects} pathPrefix={'/projects'} />
         </Animate>
     )
 }
