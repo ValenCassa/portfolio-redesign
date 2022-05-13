@@ -4,7 +4,7 @@ import styles from './styles/Contact.module.css'
 import ArrowIcon from "public/svg/ArrowIcon.svg"
 import SectionContainer from 'components/Containers/SectionContainer'
 
-const ContactLink = ({ name, href, email }: { name: string, href: string, email?: boolean }) => {
+export const ContactLink = ({ name, href, email }: { name: string, href: string, email?: boolean }) => {
     if (email) {
         return (
             <a href={`mailto:${href}`} className={styles.link}>{name}<ArrowIcon /></a>

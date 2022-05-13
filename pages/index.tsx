@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion'
 import Animate from 'components/Containers/Animate'
 import Meta from 'components/Miscellaneous/Meta'
 import Head from 'next/head'
+import Certificates from 'components/Certificates/Certificates'
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
             <Skills />
             <Projects />
             <Posts />
+            <Certificates />
             <Contact />
           </div>
         </AnimatePresence>
