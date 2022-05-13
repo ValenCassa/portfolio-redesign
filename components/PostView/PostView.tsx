@@ -8,7 +8,7 @@ const PostView = ({ post }: { post: Post }) => {
     return (
         <div className={styles.container}>
             <Link href={'/posts'}>
-                <a  className={`${styles.posts} link`}><OlderArrow />Projects</a>
+                <a  className={`${styles.posts} link`}><OlderArrow />Posts</a>
             </Link>
             <div className={styles.top}>
                 <h1 className={styles.postTitle}>{ post.title }</h1>
