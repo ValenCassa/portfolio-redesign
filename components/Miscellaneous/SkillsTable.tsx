@@ -29,11 +29,21 @@ const SkillsTable = () => {
                     <tr>
                         <td>Typescript</td>
                         <td>GraphQL</td>
+                        <td>Storybook</td>
+                    </tr>
+                    <tr>
+                        <td>React Native</td>
+                        <td>PostgreSQL</td>
                         <td></td>
                     </tr>
                     <tr>
+                        <td>Cloudinary</td>
                         <td></td>
-                        <td>PostgreSQL</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Supabase</td>
+                        <td></td>
                         <td></td>
                     </tr>
                 </tbody>
