@@ -28,13 +28,12 @@ const ListItem = ({ item, index, pathPrefix }: { item: Project | Post, index: nu
                     <div className={styles.index}>
                         {index < 10 ? `0${index}` : index}
                     </div>
-                    <div className={styles.title} id={selectedStyle}>
-                        {item.title}
-                        <ArrowIcon />
+                    <div className={styles.title}>
+                        <p className={styles.titleParagraph} id={selectedStyle}>{item.title}<ArrowIcon /></p>
                     </div>
                 </div>
-                <div className={styles.date} id={selectedStyle}>
-                    {new Date(item.date).toLocaleDateString()}
+                <div className={styles.date}>
+                    <p className={styles.dateParagraph} id={selectedStyle}>{new Date(item.date).toLocaleDateString()}</p>
                 </div>
 
             </td>

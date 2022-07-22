@@ -29,10 +29,15 @@
     }
 }
 
-.title#unselected, .date#unselected {
-    color: var(--dark-grey);
-    transition: color 0.4s;
+.titleParagraph, .dateParagraph {
+    transition: color 0.3s;
 }
+
+.titleParagraph#unselected, .dateParagraph#unselected {
+    color: var(--dark-grey);
+}
+
+
 
 .row {
     cursor: pointer;
