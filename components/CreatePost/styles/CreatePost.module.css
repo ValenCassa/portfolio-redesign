@@ -1,0 +1,36 @@
+.title {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 1em;
+}
+
+.formContainer {
+  display: grid;
+  gap: 1em;
+}
+
+.submit {
+  background: var(--box-color);
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 0.5em;
+  color: rgb(224, 224, 224);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background: #2a2a2a;
+  }
+
+  &:disabled {
+    background: #2a2a2a;
+    cursor: not-allowed;
+  }
+}
+
+#preview {
+  margin-top: 3em;
+}

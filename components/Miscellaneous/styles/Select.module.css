@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  gap: 0.5em;
+
+  .label {
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+  }
+}
+
+.error {
+  color: #bd2424;
+  font-size: 12px;
+}

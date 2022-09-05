@@ -7,6 +7,8 @@ import LinkedinIcon from "public/svg/LinkedinButton.svg";
 import LightButton from "public/svg/ButtonLight.svg";
 import GithubIcon from "public/svg/GithubButton.svg";
 import { usePortfolio } from "hooks/usePortfolio";
+import { useCookies } from "react-cookie";
+import { addDays } from "utils/addDate";
 
 const itemVariants = (delay: number | undefined) => ({
   hidden: { opacity: 0, y: 10 },
@@ -79,6 +81,7 @@ const IndexButton = ({
 
 const IndexButtons = () => {
   const { setActive } = usePortfolio();
+  const [_, setCookie] = useCookies(["indexOpened"]);
   return (
     <div className={styles.container}>
       <motion.div className={styles.buttonsContainer}>
@@ -86,7 +89,13 @@ const IndexButtons = () => {
           name={"Portfolio"}
           icon={<PortfolioIcon />}
           delay={3}
-          onClick={() => setActive(true)}
+          onClick={() => {
+            setActive(true);
+            setCookie("indexOpened", true, {
+              path: "/",
+              expires: addDays(new Date(), 15),
+            });
+          }}
         />
         <IndexButton
           name={"Twitter"}

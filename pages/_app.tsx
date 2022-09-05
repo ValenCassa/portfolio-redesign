@@ -10,30 +10,19 @@ import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import MenuContextProvider from "contexts/MenuContext";
 import Head from "next/head";
-import Router from "next/router";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import IndexPage from "components/Index";
+import { SessionProvider } from "next-auth/react";
+import { useFixAnimations } from "hooks/useFixAnimations";
+import { useActiveIndex } from "hooks/useActiveIndex";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   const router = useRouter();
-  const [active, setActive] = useState<boolean>(false);
-
-  const routeChange = () => {
-    const tempFix = () => {
-      const allStyleElems = document.querySelectorAll('style[media="x"]');
-      allStyleElems.forEach((elem) => {
-        elem.removeAttribute("media");
-      });
-    };
-    tempFix();
-  };
-
-  Router.events.on("routeChangeComplete", routeChange);
-  Router.events.on("routeChangeStart", routeChange);
+  const { active, setActive } = useActiveIndex();
+  useFixAnimations();
 
   return (
-    <>
+    <SessionProvider session={session}>
       <Head>
         <link rel="icon" href="/img/logo-tab.png" />
       </Head>
@@ -67,7 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           )}
         </AnimatePresence>
       </PortfolioContext.Provider>
-    </>
+    </SessionProvider>
   );
 }
 

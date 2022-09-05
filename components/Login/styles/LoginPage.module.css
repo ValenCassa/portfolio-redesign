@@ -1,0 +1,26 @@
+.container {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  z-index: 99999;
+  display: grid;
+  place-content: center;
+
+  .loginButton {
+    all: unset;
+    background-color: #2e2e2e;
+    border: 1px solid #464646;
+    border-radius: 3px;
+    padding: 0.8em 2em;
+    color: #fff;
+    font-family: "Plus Jakarta Sans";
+    font-size: 15px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      filter: contrast(1.1);
+    }
+  }
+}

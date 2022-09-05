@@ -1,41 +1,45 @@
 .container {
-    padding: 2em 5em;
+  padding: 2em 5em;
+}
+
+.container#preview {
+  padding: 0 !important;
 }
 
 .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 
-    .postTitle {
-        font-weight: 500;
-        font-size: 18px;
-    }
+  .postTitle {
+    font-weight: 500;
+    font-size: 18px;
+  }
 
-    .date {
-        font-size: 15px;
-        font-weight: 300;
-        color: #BBBBBB;
-    }
+  .date {
+    font-size: 15px;
+    font-weight: 300;
+    color: #bbbbbb;
+  }
 }
 
 .posts {
-    display: flex;
-    align-items: center;
-    gap: 0.4em;
-    color: white;
-    font-size: 18px;
-    margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 1em;
 }
 
 @media only screen and (max-width: 800px) {
-    .container {
-        padding: 0.7em
-    }
+  .container {
+    padding: 0.7em;
+  }
 
-    .top {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-    }
+  .top {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }

@@ -2,18 +2,19 @@ import axios from "axios";
 import useSWR from "swr";
 import { Post } from "types/Post";
 
-const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/blogs`
+const fetcher = (url: string) =>
+  axios.get<Post[] | Post>(url).then((res) => res.data);
 
-const fetcher = (url: string) => axios.get<Post[]>(url).then(res => res.data)
+const usePosts = (id?: string) => {
+  const url = id ? `/api/posts?id=${id}` : "/api/posts";
+  const { data: posts, error, mutate } = useSWR(url, fetcher);
 
-const usePosts = () => {
-    const { data: posts, error } = useSWR(API_URL, fetcher)
+  return {
+    isLoading: !error && !posts,
+    posts,
+    error,
+    refetch: mutate,
+  };
+};
 
-    return {
-        isLoading: !error && !posts,
-        posts,
-        error
-    }
-}
-
-export default usePosts
+export default usePosts;

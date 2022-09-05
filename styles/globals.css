@@ -47,7 +47,7 @@
   --box-color: #2d2d2d;
   --dark-grey: #626262;
   --text-primary: #fff;
-  --text-secondary: #C8C8C8;
+  --text-secondary: #c8c8c8;
   --project-date-color: #b4b4b4;
 }
 
@@ -57,10 +57,15 @@ body {
   margin: 0;
   background-color: var(--bg-color);
   overflow-x: hidden;
-
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
@@ -76,7 +81,7 @@ a {
 }
 
 .link {
-  font-family: 'Newsreader';
+  font-family: "Newsreader";
 }
 
 .link:hover {
@@ -119,7 +124,7 @@ a {
     font-size: 14px;
     text-align: center;
     padding: 0.1em 0.3em;
-    background-color: #ECCABE;
+    background-color: #eccabe;
     border-radius: 3px;
     font-weight: 500;
   }
@@ -139,11 +144,11 @@ a {
   pre div::-webkit-scrollbar-thumb {
     background-color: grey;
   }
-  
+
   code {
     color: unset;
   }
-  
+
   blockquote {
     text-align: left;
     display: inline-block;
@@ -155,7 +160,7 @@ a {
     color: black;
     font-family: "Creato Display";
     font-weight: bold;
-  
+
     p {
       margin: 0;
     }
@@ -168,8 +173,30 @@ a {
   }
 }
 
+.arrowLink {
+  display: flex;
+  color: white;
+  align-items: center;
+  margin-bottom: 1em;
+}
 
+.arrowLink > * + * {
+  margin-left: 0.7em;
+  font-size: 17px;
+}
 
+.formGroup {
+  width: 100%;
+  display: flex;
+}
+
+.formGroup > * {
+  width: 100%;
+}
+
+.formGroup > * + * {
+  margin-left: 1em;
+}
 
 @media only screen and (max-width: 800px) {
   .container {
@@ -178,5 +205,14 @@ a {
 
   .layoutDivider {
     display: none;
+  }
+
+  .formGroup {
+    flex-direction: column;
+  }
+
+  .formGroup > * + * {
+    margin-left: 0;
+    margin-top: 1em;
   }
 }

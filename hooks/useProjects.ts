@@ -2,18 +2,19 @@ import axios from "axios";
 import useSWR from "swr";
 import { Project } from "types/Project";
 
-const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/works`
+const fetcher = (url: string) =>
+  axios.get<Project[]>(url).then((res) => res.data);
 
-const fetcher = (url: string) => axios.get<Project[]>(url).then(res => res.data)
+const useProjects = (id?: string) => {
+  const url = id ? `/api/projects?id=${id}` : "/api/projects";
+  const { data: projects, error, mutate } = useSWR(url, fetcher);
 
-const useProjects = () => {
-    const { data: projects, error } = useSWR(API_URL, fetcher)
+  return {
+    isLoading: !error && !projects,
+    projects,
+    error,
+    refetch: mutate,
+  };
+};
 
-    return {
-        isLoading: !error && !projects,
-        projects,
-        error
-    }
-}
-
-export default useProjects
+export default useProjects;

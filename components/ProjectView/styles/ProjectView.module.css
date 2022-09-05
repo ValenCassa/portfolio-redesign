@@ -1,65 +1,69 @@
 .container {
-    padding: 2em 5em;
+  padding: 2em 5em;
 
-    a:hover {
-        text-decoration: underline;
-    }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.container#preview {
+  padding: 0 !important;
 }
 
 .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 
-    .projectTitle {
-        font-weight: 500;
-        font-size: 18px;
-    }
+  .projectTitle {
+    font-weight: 500;
+    font-size: 18px;
+  }
 
-    .date {
-        font-size: 15px;
-        font-weight: 300;
-        color: #BBBBBB;
-    }
+  .date {
+    font-size: 15px;
+    font-weight: 300;
+    color: #bbbbbb;
+  }
 }
 
 .tab {
-    position: relative;
-    z-index: 9;
-    background-color: #373737;
-    display: flex;
-    justify-content: center;
-    padding: 0.3em;
-    color: #e7e7e7;
-    font-weight: 500;
-    font-size: 14px;
-    border-radius: 3px;
-    margin-bottom: 0.5em;
-    box-shadow: 0px 1px 36px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 9;
+  background-color: #373737;
+  display: flex;
+  justify-content: center;
+  padding: 0.3em;
+  color: #e7e7e7;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-bottom: 0.5em;
+  box-shadow: 0px 1px 36px rgba(0, 0, 0, 0.15);
 }
 
 .projects {
-    display: flex;
-    align-items: center;
-    gap: 0.4em;
-    color: white;
-    font-size: 18px;
-    margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 1em;
 }
 
 .stack {
-    color: white;
-    text-align: center;
-    font-size: 15px;
+  color: white;
+  text-align: center;
+  font-size: 15px;
 }
 
 .content {
-    margin-top: 2em;
+  margin-top: 2em;
 }
 
 @media only screen and (max-width: 800px) {
-    .container {
-        padding: 0.7em
-    }
+  .container {
+    padding: 0.7em;
+  }
 }

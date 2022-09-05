@@ -4,24 +4,27 @@ import Spinner from "components/Miscellaneous/Spinner";
 import usePosts from "hooks/usePosts";
 import { NextPage } from "next";
 import Head from "next/head";
+import { Post } from "types/Post";
 
 const Posts: NextPage = () => {
-    const { posts, isLoading } = usePosts();
-    
-    if (isLoading || !posts) return <Spinner />
+  const { posts, isLoading } = usePosts();
 
-    const sortedPosts = posts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+  if (isLoading || !posts) return <Spinner />;
 
-    return (
-        <>
-        <Head>
-            <title>Posts | Valentin Cassarino</title>
-        </Head>
-        <Animate>
-            <List name="Posts" data={sortedPosts} pathPrefix={'/posts'} />
-        </Animate>
-        </>
-    )
-} 
+  const sortedPosts = (posts as Post[]).sort(
+    (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
+  );
 
-export default Posts
+  return (
+    <>
+      <Head>
+        <title>Posts | Valentin Cassarino</title>
+      </Head>
+      <Animate>
+        <List name="Posts" data={sortedPosts} pathPrefix={"/posts"} />
+      </Animate>
+    </>
+  );
+};
+
+export default Posts;
