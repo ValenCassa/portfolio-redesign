@@ -26,39 +26,39 @@ const ProjectView: NextPage<Props> = ({ project }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const projects = await getAllProjects();
-
-  if (!projects)
+  try {
+    const projects = await getAllProjects();
+    return {
+      paths: projects.map((project: Project) => ({
+        params: {
+          id: project.id,
+        },
+      })),
+      fallback: "blocking",
+    };
+  } catch (err) {
     return {
       paths: [],
       fallback: "blocking",
     };
-
-  return {
-    paths: projects.map((project: Project) => ({
-      params: {
-        id: project.id,
-      },
-    })),
-    fallback: "blocking",
-  };
+  }
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const project = await getOneProject(params?.id as string);
-
-  if (!project)
+  try {
+    const project = await getOneProject(params?.id as string);
+    return {
+      props: { project },
+      revalidate: 1,
+    };
+  } catch (e) {
     return {
       props: {},
       redirect: {
         pathname: "/projects",
       },
     };
-
-  return {
-    props: { project },
-    revalidate: 1,
-  };
+  }
 };
 
 export default ProjectView;

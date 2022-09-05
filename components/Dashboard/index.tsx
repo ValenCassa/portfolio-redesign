@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Post } from "types/Post";
+import { Project } from "types/Project";
 import styles from "./styles/DashboardPage.module.css";
 
 const DashboardPage = () => {
@@ -21,7 +22,7 @@ const DashboardPage = () => {
   const sortedPosts = (posts as Post[]).sort(
     (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
   );
-  const sortedProjects = projects.sort(
+  const sortedProjects = (projects as Project[]).sort(
     (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
   );
 

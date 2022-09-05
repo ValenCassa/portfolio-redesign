@@ -3,7 +3,7 @@ import { getToken } from "next-auth/jwt";
 import postHandler from "services/postsHandler";
 import projectHandler from "services/projectHandler";
 import clientPromise from "./clientPromise";
-import { postSchema, projectSchema, Schema } from "./validationSchemas";
+import { postSchema, projectSchema } from "./validationSchemas";
 
 type Middleware = "posts" | "projects";
 
@@ -54,12 +54,12 @@ export const runMiddleware = (type: Middleware) => {
   return async (req: NextApiRequest, res: NextApiResponse<any>) => {
     const { method } = req;
 
-    /*if (["POST", "PUT", "DELETE"].includes(method as string)) {
+    if (["POST", "PUT", "DELETE"].includes(method as string)) {
       const token = await getToken({ req });
       if (!token) {
         return res.status(401).json({ message: "Unauthorized" });
       }
-    }*/
+    }
 
     if (["POST", "PUT"].includes(method as string)) {
       await validate({ req, res, type });

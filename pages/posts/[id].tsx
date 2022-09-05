@@ -26,39 +26,39 @@ const PostView: NextPage<Props> = ({ post }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getAllPosts();
-
-  if (!posts)
+  try {
+    const posts = await getAllPosts();
+    return {
+      paths: posts.map((project: Post) => ({
+        params: {
+          id: project.id,
+        },
+      })),
+      fallback: "blocking",
+    };
+  } catch (err) {
     return {
       paths: [],
       fallback: "blocking",
     };
-
-  return {
-    paths: posts.map((post: Post) => ({
-      params: {
-        id: post.id,
-      },
-    })),
-    fallback: "blocking",
-  };
+  }
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const post = await getOnePost(params?.id as string);
-
-  if (!post)
+  try {
+    const post = await getOnePost(params?.id as string);
+    return {
+      props: { post },
+      revalidate: 1,
+    };
+  } catch (e) {
     return {
       props: {},
       redirect: {
-        pathname: "/posts",
+        pathname: "/projects",
       },
     };
-
-  return {
-    props: { post },
-    revalidate: 1,
-  };
+  }
 };
 
 export default PostView;
