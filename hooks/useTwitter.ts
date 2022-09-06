@@ -2,7 +2,7 @@ import axios from "axios";
 import useSWR from "swr";
 import { Twitter } from "types/Twitter";
 
-const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/twitter`;
+const API_URL = `/api/twitter`;
 
 const fetcher = async (url: string) =>
   axios.get<Twitter>(url).then((res) => res.data);

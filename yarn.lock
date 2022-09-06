@@ -4646,6 +4646,11 @@
   dependencies:
     "is-number" "^7.0.0"
 
+"toad-scheduler@^1.6.1":
+  "integrity" "sha512-UjNerGmJIp72lt1d6wtGZUdgzgYFM9xVJBeDJzCLOVIHbrf8c6e3iq6rswRV/8/KA8WJLUuH71LYu96yoXgNRQ=="
+  "resolved" "https://registry.npmjs.org/toad-scheduler/-/toad-scheduler-1.6.1.tgz"
+  "version" "1.6.1"
+
 "toposort@^2.0.2":
   "integrity" "sha512-0a5EOkAUp8D4moMi2W8ZF8jcga7BgZd91O/yabJCFY8az+XSzeGyTKs0Aoo897iV1Nj6guFq8orWDS96z91oGg=="
   "resolved" "https://registry.npmjs.org/toposort/-/toposort-2.0.2.tgz"
