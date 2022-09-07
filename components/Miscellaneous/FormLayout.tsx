@@ -8,6 +8,7 @@ import PostView from "components/PostView/PostView";
 import ProjectView from "components/ProjectView/ProjectView";
 import { Post } from "types/Post";
 import { Project } from "types/Project";
+import Head from "next/head";
 
 export const Preview = ({
   type,
@@ -18,6 +19,13 @@ export const Preview = ({
 }) => {
   return (
     <>
+      <Head>
+        <title>
+          {type === "post"
+            ? "Post | Valentin Cassarino"
+            : "Project | Valentin Cassarino"}
+        </title>
+      </Head>
       <p className={styles.title} id={styles.preview}>
         Preview
       </p>
